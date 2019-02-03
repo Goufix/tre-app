@@ -14,7 +14,7 @@ function App() {
       <hr />
       <div>
         <button onClick={() => setScreen(INPUT_SCREEN)}>Ir para Input</button>
-        <button onClick={() => setScreen(OUTPUT_SCREEN)}>Ir para Input</button>
+        <button onClick={() => setScreen(OUTPUT_SCREEN)}>Ir para Output</button>
       </div>
     </>
   );
