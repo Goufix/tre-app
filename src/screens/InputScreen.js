@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { INPUT_SCREEN } from './SwitchScreen';
-let response = '';
+import styles from '../styles/styles.css';
 
-export function write() {
+export function write(response) {
   const arrayResp = response.split('\n');
   alert(arrayResp);
 }
@@ -10,9 +10,9 @@ export function write() {
 export default function InputScreen() {
   const [input, setInput] = useState('');
   function count(e) {
-    response += input;
+    let response = input;
     e.preventDefault();
-    write();
+    write(response);
   }
 
   function handleInput(e) {
@@ -20,9 +20,6 @@ export default function InputScreen() {
   }
   return (
     <>
-      <h1>
-        Na tela <samp>{INPUT_SCREEN} (input)</samp>.
-      </h1>
       <hr />
       <form onSubmit={count}>
         <textarea value={input} onChange={handleInput} />
