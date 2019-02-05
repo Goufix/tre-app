@@ -1,6 +1,6 @@
 import React from 'react';
 
 export default function Write(props) {
-  const arrayResp = props.data;
-  return <p>{arrayResp}</p>;
+  const resp = props.data;
+  return <p>{resp}</p>;
 }

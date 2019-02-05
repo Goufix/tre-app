@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { INPUT_SCREEN } from './SwitchScreen';
+import Write from './Write';
 import '../styles/styles.css';
 
 export default function InputScreen() {
@@ -16,19 +17,15 @@ export default function InputScreen() {
   function handleInput(e) {
     setInput(e.target.value);
   }
-
   function handleNick(e) {
     setNick(e.target.value);
   }
-
   function handleTag(e) {
     setTag(e.target.value);
   }
-
   function handlePosition(e) {
     setPosition(e.target.value);
   }
-
   function handleWeek(e) {
     setWeekRef(e.target.value);
   }
@@ -38,19 +35,28 @@ export default function InputScreen() {
       <hr />
       <form onSubmit={count}>
         <label>Nick:</label>
-        <input type="text" value={nick} onChange={handleNick} />
+        <br />
+        <input type="text" size="20" value={nick} onChange={handleNick} />
         <br />
         <label>Patente:</label>
-        <input type="text" value={position} onChange={handlePosition} />
+        <br />
+        <input
+          type="text"
+          size="20"
+          value={position}
+          onChange={handlePosition}
+        />
         <br />
         <label>TAG:</label>
-        <input type="text" value={tag} onChange={handleTag} />
+        <br />
+        <input type="text" size="20" value={tag} onChange={handleTag} />
         <br />
         <label>Semana de Referência:</label>
-        <input type="text" value={weekRef} onChange={handleWeek} />
+        <br />
+        <input type="text" size="20" value={weekRef} onChange={handleWeek} />
+        <br />
         <br />
         <label>Porcentagem Semanal:</label>
-        <br />
         <textarea value={input} onChange={handleInput} />
         <input type="submit" value="Gerar" />
       </form>
