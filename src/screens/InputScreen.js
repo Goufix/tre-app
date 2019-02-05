@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { INPUT_SCREEN } from './SwitchScreen';
-import styles from '../styles/styles.css';
-
-export function Write(props) {
-  const arrayResp = props.data;
-  return <p>{arrayResp}</p>;
-}
+import '../styles/styles.css';
 
 export default function InputScreen() {
   const [input, setInput] = useState('');
