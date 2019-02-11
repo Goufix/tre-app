@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import { INPUT_SCREEN } from './SwitchScreen';
+import ReactDOM from 'react-dom';
 import Write from './Write';
 import '../styles/styles.css';
 
-export default function InputScreen() {
+export default function InputScreen(props) {
   const [input, setInput] = useState('');
   const [nick, setNick] = useState('');
   const [position, setPosition] = useState('');
   const [weekRef, setWeekRef] = useState('');
   const [tag, setTag] = useState('');
-  function count(e) {
-    return <Write data={input} />;
-    e.preventDefault();
+
+  const data = {
+    input,
+    nick,
+    position,
+    weekRef,
+    tag
+  };
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    props.onSubmit(data);
   }
 
   function handleInput(e) {
@@ -33,7 +43,7 @@ export default function InputScreen() {
   return (
     <>
       <hr />
-      <form onSubmit={count}>
+      <form onSubmit={handleSubmit}>
         <label>Nick:</label>
         <br />
         <input type="text" size="20" value={nick} onChange={handleNick} />
