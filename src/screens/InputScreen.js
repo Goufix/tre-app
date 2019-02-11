@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { INPUT_SCREEN } from './SwitchScreen';
-import ReactDOM from 'react-dom';
-import Write from './Write';
 import '../styles/styles.css';
 
 export default function InputScreen(props) {
@@ -11,17 +8,9 @@ export default function InputScreen(props) {
   const [weekRef, setWeekRef] = useState('');
   const [tag, setTag] = useState('');
 
-  const data = {
-    input,
-    nick,
-    position,
-    weekRef,
-    tag
-  };
-
   function handleSubmit(event) {
     event.preventDefault();
-    props.onSubmit(data);
+    props.onSubmit([input, nick, position, weekRef, tag]);
   }
 
   function handleInput(e) {

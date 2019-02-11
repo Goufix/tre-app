@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import InputScreen from './InputScreen';
+import OutputScreen from './OutputScreen';
 
-export default function Write(props) {
-  const resp = props.data;
-  return <p>{resp}</p>;
+export default function generator() {
+  const [data, setData] = useState(null);
+
+  function handleSubmit(data) {
+    setData(data);
+  }
+
+  return (
+    <>
+      <InputScreen onSubmit={handleSubmit} />
+      {data && <OutputScreen data={data} />}
+    </>
+  );
 }

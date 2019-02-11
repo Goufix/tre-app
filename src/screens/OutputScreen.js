@@ -1,10 +1,25 @@
-import React from "react";
-import { OUTPUT_SCREEN } from "./SwitchScreen";
+import React from 'react';
+import styled from 'styled-components';
 
-export default function InputScreen() {
+const Output = styled.pre`
+  border: solid 1px;
+  padding: 1rem;
+`;
+
+function Data(props) {
   return (
-    <h1>
-      Na tela <samp>{OUTPUT_SCREEN} (output)</samp>.
-    </h1>
+    <Output>
+      <p>{props.data}</p>
+    </Output>
+  );
+}
+
+export default function OutputScreen(props) {
+  return (
+    <Output>
+      {props.data.map((data, index) => {
+        return <Data data={data} />;
+      })}
+    </Output>
   );
 }
