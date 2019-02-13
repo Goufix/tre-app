@@ -10,7 +10,7 @@ export default function InputScreen(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.onSubmit([input, nick, position, weekRef, tag]);
+    props.onSubmit([nick, position, tag, weekRef, input]);
   }
 
   function handleInput(e) {

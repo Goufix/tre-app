@@ -9,7 +9,7 @@ const Output = styled.pre`
 `;
 
 export default function OutputScreen(props) {
-  const array = props.data.reverse();
+  const array = props.data;
   return (
     <Output>
       {array.map((data, index, array) => {
