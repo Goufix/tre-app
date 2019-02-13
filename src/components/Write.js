@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import InputScreen from './InputScreen';
-import OutputScreen from './OutputScreen';
+import InputScreen from '../screens/InputScreen';
+import OutputScreen from './Output';
 
 export default function generator() {
   const [data, setData] = useState(null);

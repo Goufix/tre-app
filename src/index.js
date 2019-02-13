@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Write from './screens/Write';
+import Write from './components/Write';
 
 function App() {
   return (
