@@ -1,4 +1,4 @@
 export default function parseData(data) {
-  const resp = data.split('\n');
+  let resp = data.split('\n');
   return resp;
 }
