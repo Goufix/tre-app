@@ -1,4 +1,11 @@
-export default function parseData(data) {
+const data = require('./meta');
+
+function parseData(data) {
   let resp = data.split('\n');
-  return resp;
+  const res = resp.forEach((data, index, array) => {
+    const res = data.replace('• ', '')
+   return res;
+  })
+  return res;
 }
+console.log(parseData(data));
