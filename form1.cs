@@ -36,7 +36,7 @@ public partial class Form1 : Form
                     linha = linha.Replace("Supervisores na média/acima da média:", "");
                     linha = linha.Replace("%", "");
                     nick = linha.Substring(0, linha.IndexOf("("));
-                    separador = (linha.Substring(linha.IndexOf(" -") + 2));
+                    separador = linha.Substring(linha.IndexOf(" -") + 2);
                     porcentagem = int.Parse(separador);
 
                     //  

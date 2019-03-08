@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InputScreen from '../screens/InputScreen';
-import OutputScreen from './Output';
+import Output from './Output';
 
 export default function generator() {
   const [data, setData] = useState(null);
@@ -12,7 +12,7 @@ export default function generator() {
   return (
     <>
       <InputScreen onSubmit={handleSubmit} />
-      {data && <OutputScreen data={data} />}
+      {data && <Output data={data} />}
     </>
   );
 }

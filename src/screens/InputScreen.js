@@ -3,14 +3,14 @@ import '../styles/styles.css';
 
 export default function InputScreen(props) {
   const [input, setInput] = useState('');
-  const [nick, setNick] = useState('');
-  const [position, setPosition] = useState('');
-  const [weekRef, setWeekRef] = useState('');
-  const [tag, setTag] = useState('');
+  const [nick, setNick] = useState('Goufix');
+  const [position, setPosition] = useState('Tenente');
+  const [weekRef, setWeekRef] = useState('AAA');
+  const [tag, setTag] = useState('[Gfx]');
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.onSubmit([nick, position, tag, weekRef, input]);
+    props.onSubmit([nick, tag, position, weekRef, input]);
   }
 
   function handleInput(e) {

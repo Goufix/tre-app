@@ -90,4 +90,4 @@ module.exports = `• cc94 - 450% [Melhor treinador de nível 1 da semana]
 • Cxrz - 00%
 • .:Lord93:. - 00%
 • Firstbraw - 00%
-`
+`;
